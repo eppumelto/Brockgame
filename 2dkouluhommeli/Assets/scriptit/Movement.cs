@@ -8,6 +8,7 @@ public class movement : MonoBehaviour
     public Rigidbody2D rb;
     public float speed = 12f;
     public AudioSource audioSource;
+    public float rollSpeed = 2f;
 
     // Start is called before the first frame update
     void Start()
@@ -21,6 +22,7 @@ public class movement : MonoBehaviour
     {
         move();
         Boost();
+        Rotate();
     }
 
     public void move()
@@ -35,12 +37,24 @@ public class movement : MonoBehaviour
         if (Input.GetButton("Boost"))
         {
             speed = 50f;
-            transform.rotation = Quaternion.Euler(0, -180, -30);
             audioSource.Play();
         }
         else
         {
             speed = 12f;
                     }
+    }
+
+    public void Rotate()
+    {
+        if (Input.GetButton("Rollforward")) {
+            transform.Rotate(Vector3.back * rollSpeed);
+            UnityEngine.Debug.Log("juu");
+        }
+        if (Input.GetButton("Rollback"))
+        {
+            transform.Rotate(Vector3.forward * rollSpeed);
+            UnityEngine.Debug.Log("juu");
+        }
     }
 }

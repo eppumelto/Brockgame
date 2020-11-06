@@ -45,6 +45,9 @@ TagManager:
   - name: Tausta
     uniqueID: 1356916365
     locked: 0
+  - name: MapObjects
+    uniqueID: 2635948697
+    locked: 0
   - name: Pisteet
     uniqueID: 2997412535
     locked: 0
@@ -53,4 +56,7 @@ TagManager:
     locked: 0
   - name: Ramppi
     uniqueID: 2198333087
+    locked: 0
+  - name: maa
+    uniqueID: 4059523805
     locked: 0
