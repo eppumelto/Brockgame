@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Piste
   - Void
+  - Ground
   layers:
   - Default
   - TransparentFX
@@ -54,6 +55,9 @@ TagManager:
     locked: 0
   - name: Player
     uniqueID: 1985911879
+    locked: 0
+  - name: enemy
+    uniqueID: 2601240561
     locked: 0
   - name: Ramppi
     uniqueID: 2198333087

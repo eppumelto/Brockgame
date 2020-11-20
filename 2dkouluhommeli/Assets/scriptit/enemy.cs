@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class camerafollow : MonoBehaviour
+public class enemy : MonoBehaviour
 {
-    public Transform target;
+    public int health = 100;
 
 
     // Start is called before the first frame update
@@ -17,10 +17,20 @@ public class camerafollow : MonoBehaviour
     void Update()
     {
         
-        if (target)
-        {
-            transform.position = Vector3.Lerp(transform.position, target.position, 0.1f) + new Vector3(0, 0.2f, -10);
+    }
+
+    public void takeDamage(int damage)
+    {
+        health -= damage;
+        if (health == 0)
+        {            
+            die();
         }
 
+    }
+
+     void die()
+    {
+        Destroy(gameObject);
     }
 }

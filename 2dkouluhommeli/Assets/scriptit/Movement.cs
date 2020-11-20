@@ -6,10 +6,10 @@ public class Movement : MonoBehaviour
 {
    
     public Rigidbody2D rb;
-    public float speed = 12f;
+    public float speed = 10f;
     public AudioSource audioSource;
     public float rollSpeed = 2f;
-
+    public bool isGrounded;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,6 +23,7 @@ public class Movement : MonoBehaviour
         move();
         Boost();
         Rotate();
+        Jump();
     }
 
     public void move()
@@ -30,13 +31,35 @@ public class Movement : MonoBehaviour
         float x = Input.GetAxis("Horizontal");
         float moveby = x * speed;
         rb.velocity = new Vector2(moveby, rb.velocity.y);
+
+    }
+
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Ground")
+        {
+            isGrounded = true;
+        }
+    }
+
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        isGrounded = false;
+    }
+
+    public void Jump()
+    {       
+        if (Input.GetButtonDown("Jump") && isGrounded == true)
+        {
+            GetComponent<Rigidbody2D>().AddForce(new Vector2(0, 10), ForceMode2D.Impulse);
+        }
     }
 
     public void Boost ()
     {
         if (Input.GetButton("Boost"))
         {
-            speed = 50f;
+            speed = 20f;
             audioSource.Play();
         }
         else
