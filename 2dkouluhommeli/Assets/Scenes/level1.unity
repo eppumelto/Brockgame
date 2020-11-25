@@ -722,8 +722,6 @@ GameObject:
   - component: {fileID: 345147917}
   - component: {fileID: 345147920}
   - component: {fileID: 345147919}
-  - component: {fileID: 345147921}
-  - component: {fileID: 345147918}
   - component: {fileID: 345147922}
   - component: {fileID: 345147923}
   - component: {fileID: 345147924}
@@ -816,22 +814,6 @@ MonoBehaviour:
   audioSource: {fileID: 988842809}
   rollSpeed: 2.25
   isGrounded: 1
---- !u!58 &345147918
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 345147914}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 2.49, y: -1.9}
-  serializedVersion: 2
-  m_Radius: 1
 --- !u!50 &345147919
 Rigidbody2D:
   serializedVersion: 4
@@ -844,7 +826,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 1
-  m_Mass: 1.6512996
+  m_Mass: 1
   m_LinearDrag: 1
   m_AngularDrag: 0.05
   m_GravityScale: 1
@@ -868,22 +850,6 @@ MonoBehaviour:
   Score: {fileID: 1526611811}
   ScoreCount: 0
   piste: {fileID: 0}
---- !u!58 &345147921
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 345147914}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -2.2, y: -1.8}
-  serializedVersion: 2
-  m_Radius: 1.05
 --- !u!68 &345147922
 EdgeCollider2D:
   m_ObjectHideFlags: 0
@@ -901,9 +867,31 @@ EdgeCollider2D:
   m_EdgeRadius: 0
   m_Points:
   - {x: 1.4064546, y: -2.1806805}
-  - {x: 0.29890537, y: -2.560803}
+  - {x: 1.0366759, y: -2.1965237}
+  - {x: 0.5824194, y: -2.4940643}
+  - {x: -0.08448315, y: -2.4948616}
+  - {x: -0.2941494, y: -2.3642745}
+  - {x: -0.7391968, y: -2.1821017}
+  - {x: -0.9709139, y: -2.002984}
   - {x: -1.0321217, y: -2.084746}
-  - {x: -1.7493525, y: -0.93621397}
+  - {x: -1.1283073, y: -2.0892086}
+  - {x: -1.2423334, y: -2.3699965}
+  - {x: -1.3856449, y: -2.5247083}
+  - {x: -1.4928684, y: -2.6760821}
+  - {x: -1.5770683, y: -2.78906}
+  - {x: -1.8744764, y: -2.87739}
+  - {x: -2.3089333, y: -2.89494}
+  - {x: -2.5667524, y: -2.8547478}
+  - {x: -2.8728943, y: -2.6714597}
+  - {x: -2.9404583, y: -2.6342592}
+  - {x: -2.8271198, y: -2.6217074}
+  - {x: -3.0540237, y: -2.4839993}
+  - {x: -3.1795807, y: -2.2922683}
+  - {x: -3.2078438, y: -2.0542712}
+  - {x: -3.217639, y: -1.8199172}
+  - {x: -3.2762003, y: -1.6325326}
+  - {x: -3.1502638, y: -1.3458042}
+  - {x: -2.833377, y: -1.0196376}
   - {x: -2.3977222, y: -0.90223527}
   - {x: -2.2079859, y: -0.68884635}
   - {x: -2.0908213, y: -0.24064255}
@@ -945,7 +933,20 @@ EdgeCollider2D:
   - {x: 2.1688418, y: 0.055140972}
   - {x: 2.3392854, y: -0.5377114}
   - {x: 2.2510633, y: -0.916028}
-  - {x: 1.748261, y: -1.4078331}
+  - {x: 2.4465175, y: -0.9105501}
+  - {x: 2.665512, y: -0.89060736}
+  - {x: 2.7973137, y: -0.98023844}
+  - {x: 3.0259027, y: -1.090558}
+  - {x: 3.2566085, y: -1.3035889}
+  - {x: 3.448505, y: -1.5738173}
+  - {x: 3.4311824, y: -2.1879716}
+  - {x: 3.3327365, y: -2.452012}
+  - {x: 2.996008, y: -2.7702065}
+  - {x: 2.7503371, y: -2.8662868}
+  - {x: 2.3323426, y: -2.908215}
+  - {x: 1.9501433, y: -2.7716584}
+  - {x: 1.6651363, y: -2.4920664}
+  - {x: 1.5580378, y: -2.0986652}
   - {x: 1.367537, y: -2.209001}
 --- !u!114 &345147923
 MonoBehaviour:
@@ -2555,7 +2556,7 @@ PrefabInstance:
     - target: {fileID: 3486805993417512588, guid: 2ee8564607f69444dba02d97a8d344c5,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3486805993417512590, guid: 2ee8564607f69444dba02d97a8d344c5,
         type: 3}
