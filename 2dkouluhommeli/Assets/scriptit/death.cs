@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class death : MonoBehaviour
 {
     public GameObject deathpanel;
+    public GameObject winnigs;
     public GameObject player;
 
     // Start is called before the first frame update
@@ -14,6 +15,7 @@ public class death : MonoBehaviour
     {
         gameObject.tag = "Player";
         deathpanel.SetActive(false);
+        winnigs.SetActive(false);
     }
 
     // Update is called once per frame
@@ -31,5 +33,13 @@ public class death : MonoBehaviour
 
             Destroy(player);
         }
+
+        if (other.tag == "end")
+        {
+            winnigs.SetActive(true);
+
+            Destroy(player);
+        }
+
     }
 }
