@@ -59,7 +59,7 @@ public class Movement : MonoBehaviour
     {
         if (Input.GetButton("Boost"))
         {
-            speed = 20f;
+            speed = 50f;
             audioSource.Play();
         }
         else

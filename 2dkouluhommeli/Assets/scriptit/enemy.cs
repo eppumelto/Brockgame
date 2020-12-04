@@ -13,10 +13,15 @@ public class enemy : MonoBehaviour
         
     }
 
+    public void Move()
+    {
+        transform.Translate(-1 * Time.deltaTime, 0, 0);
+    }
+
     // Update is called once per frame
     void Update()
     {
-        
+        Move();
     }
 
     public void takeDamage(int damage)

@@ -42,4 +42,14 @@ public class death : MonoBehaviour
         }
 
     }
+
+    public void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Vihollinen")
+        {
+            deathpanel.SetActive(true);
+
+            Destroy(player);
+        }
+    }
 }
