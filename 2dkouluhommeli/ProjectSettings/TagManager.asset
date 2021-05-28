@@ -9,6 +9,7 @@ TagManager:
   - Ground
   - end
   - Vihollinen
+  - vesi
   layers:
   - Default
   - TransparentFX

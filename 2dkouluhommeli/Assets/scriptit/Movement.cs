@@ -40,11 +40,17 @@ public class Movement : MonoBehaviour
         {
             isGrounded = true;
         }
+      
     }
 
     private void OnCollisionExit2D(Collision2D collision)
     {
         isGrounded = false;
+
+        if (collision.gameObject.tag == "vesi")
+        {
+            isGrounded = true;
+        }
     }
 
     public void Jump()

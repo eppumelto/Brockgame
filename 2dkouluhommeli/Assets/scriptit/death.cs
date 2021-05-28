@@ -24,6 +24,7 @@ public class death : MonoBehaviour
         
     }
 
+    //tarkistetaan osuuko pelaaja voidiin tai maaliin
     public  void OnTriggerEnter2D(Collider2D other)
     {
         
